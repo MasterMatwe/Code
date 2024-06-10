@@ -1,0 +1,152 @@
+body {
+    font-family: "Poppins", sans-serif; /* Font chữ hiện đại và độc đáo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #83b4ff, #fdffe2); /* Nền gradient phức tạp hơn */
+    overflow: hidden; /* Ẩn các phần tử vượt ra ngoài màn hình */
+  }
+  
+  .container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Đổ bóng nổi bật hơn */
+    position: relative; /* Cho phép định vị các phần tử con */
+    overflow: hidden; /* Ẩn các phần tử con vượt ra ngoài */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng cho chữ */
+  }
+  
+  /* Hiệu ứng gợn sóng khi hover vào input */
+  .input-box {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: none; /* Loại bỏ viền mặc định */
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8); /* Nền trong suốt nhẹ */
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    background-color: rgba(255, 255, 255, 1); /* Nền trắng khi focus */
+  }
+  
+  input[type="text"]:focus::before,
+  input[type="email"]:focus::before,
+  input[type="password"]:focus::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #4CAF50; /* Màu xanh lá cây */
+    transform: scaleX(0); /* Bắt đầu với kích thước 0 */
+    transform-origin: left center; /* Điểm bắt đầu của hiệu ứng scale */
+    transition: transform 0.3s ease;
+  }
+  
+  input[type="text"]:focus::before,
+  input[type="email"]:focus::before,
+  input[type="password"]:focus::before {
+    transform: scaleX(1); /* Mở rộng ra toàn bộ input khi focus */
+  }
+  
+  
+  /* Hiệu ứng hạt bụi chuyển động */
+  .dust-particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: dustAnimation 5s linear infinite;
+  }
+  
+  @keyframes dustAnimation {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(200px, -100px);
+    }
+  }
+  
+  /* Thêm nhiều hạt bụi với vị trí và tốc độ ngẫu nhiên */
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Đặt ở phía sau các phần tử khác */
+  }
+  
+  .container::before {
+    content: "";
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); /* Thêm texture nền */
+  }
+  
+  .eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50; /* Màu xanh lá cây */
+    color: white;
+    padding: 12px 25px;
+    margin: 15px 0px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng chuyển màu nền và chuyển động */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049; /* Màu xanh lá cây đậm hơn khi hover */
+    transform: translateY(-2px); /* Hiệu ứng chuyển động lên khi hover */
+  }
+  
+  /* Hiệu ứng cho placeholder */
+  ::placeholder {
+    color: #aaa;
+  }
+  
+  /* Hiệu ứng khi nhập liệu */
+  input[type="text"]:valid,
+  input[type="email"]:valid,
+  input[type="password"]:valid {
+    border-color: #2ecc71; /* Màu xanh lá cây nhạt khi nhập liệu hợp lệ */
+  }
+  
+  input[type="text"]:invalid,
+  input[type="email"]:invalid,
+  input[type="password"]:invalid {
+    border-color: #e74c3c; /* Màu đỏ khi nhập liệu không hợp lệ */
+  }

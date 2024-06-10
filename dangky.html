@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="dangnhap.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form id="registrationForm"> <!-- Thêm thẻ form với ID khớp với JavaScript -->
+            <h1>Đăng Ký</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Họ và tên" name="fullname" required>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Email" name="email" required>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Tên đăng nhập" name="username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Mật khẩu" name="password" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Nhập lại mật khẩu" name="confirm_password" required>
+            </div>
+            <button type="submit" class="btn">Đăng Ký</button>
+            <div class="register-link">
+                <p>Đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a></p> 
+            </div>
+        </form>
+    </div>
+    <script src="dangky.js"></script>
+</body>
+</html>
